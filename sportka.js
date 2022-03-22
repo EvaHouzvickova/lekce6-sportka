@@ -25,3 +25,11 @@ for(let i = 0; i < 7; i++) {
     console.log(tazenaCisla);
     console.log(osudi);
 }
+
+//vypis do html
+
+let vyherniCisla = document.querySelector('#vyherni-cisla');
+
+for (let j = 0; j < tazenaCisla.length; j++) {
+    vyherniCisla.innerHTML += '<span class="cislo" >' + tazenaCisla[j] + '</span>';
+}
