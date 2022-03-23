@@ -8,15 +8,16 @@
 // ... který pak přidej dovnitř prvku <div id="vyherni-cisla">:
 
 
+function losovani() {
 let osudi = [];
 
-for(let i = 1; i <= 49; i = i + 1) {
+for (let i = 1; i <= 49; i = i + 1) {
     osudi.push(i);
 }
 
 let tazenaCisla = [];
 
-for(let i = 0; i < 7; i++) {
+for (let i = 0; i < 7; i++) {
     let vyherniIndex = Math.floor(Math.random() * osudi.length);
     let vyherniCislo = osudi[vyherniIndex];
 
@@ -26,10 +27,9 @@ for(let i = 0; i < 7; i++) {
     console.log(osudi);
 }
 
-//vypis do html
-
 let vyherniCisla = document.querySelector('#vyherni-cisla');
 
 for (let j = 0; j < tazenaCisla.length; j++) {
     vyherniCisla.innerHTML += '<span class="cislo" >' + tazenaCisla[j] + '</span>';
+}
 }
